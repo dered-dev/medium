@@ -71,7 +71,7 @@ $(function () {
   // }
 
   $('#select__display').change(function(){
-    if($('#select__display') === "network"){
+    if($('#select__display').val() === "network"){
       $('#ctn__img__network').removeClass('d-none')
     }else{
       $('#ctn__img__network').addClass('d-none')
