@@ -1,0 +1,12 @@
+.container__post{
+  max-width: 600px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.send__post{
+  color: #fff !important;
+  text-decoration: none;
+  text-transform: uppercase;
+}
