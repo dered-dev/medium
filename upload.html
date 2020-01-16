@@ -11,11 +11,11 @@
 <link rel="stylesheet" href="assets/css/upload.css">
 </head>
 <body>
- <div class="container mt-5">
+ <div class="container mt-4">
    <div class="row">
      <div class="container__post">
-       <h1 class="text-center">Create new post</h1>
-      <form action="" class="mt-5">
+       <form action="" class="mt-2 card pt-1 pr-4 pb-4 pl-4 pt-1">
+        <h1 class="text-center mt-1">Create new post</h1>
         <div class="row">
           <div class="col-12">
             <label for="">Title Post</label>
@@ -24,27 +24,27 @@
 
           <div class="form-group col-12">
             <label for="exampleFormControlTextarea1">Content</label>
-            <textarea class="form-control" id="exampleFormControlTextarea1" name="content__post" rows="3"></textarea>
+            <textarea class="form-control" id="exampleFormControlTextarea1" name="content__post" rows="2"></textarea>
           </div>
 
           <div class="form-group col-12">
             <label for="">Large image</label>
-            <div class="input-group mb-3">
+            <div class="input-group mb-1">
               <input type="file" onchange="encodeImageFileAsURL(this)" />
               <input type="hidden" name="img__large">
             </div>
             <label for="">Square image</label>
-            <div class="input-group mb-3">
+            <div class="input-group mb-1">
               <input type="file" onchange="encodeImageFileAsURL(this)" />
               <input type="hidden" name="img__square">
             </div>
           </div>
 
-          <div class="col-4 mt-3">
-            <label for="">Minutes to read post</label>
-            <input type="text" class="form-control" placeholder="" name="minutes">
+          <div class="col-12 col-md-3 mt-1">
+            <label for="">Minutes to read</label>
+            <input type="text" class="form-control" placeholder="p.ej. 5" name="minutes">
           </div>
-          <div class="col-8 mt-3">
+          <div class="col-12 col-md-5 mt-1">
             <div class="form-group">
               <label for="exampleFormControlSelect1">Category</label>
               <select class="form-control" id="exampleFormControlSelect1" name="category__post">
@@ -57,15 +57,15 @@
               </select>
             </div>
           </div>
-          <div class="col-6 mt-3">
+          <div class="col-12 col-md-4 mt-1">
             <label for="">Author post</label>
             <input type="text" class="form-control" placeholder="" name="author__post">
           </div>
-          <div class="col-6 mt-3">
+          <div class="col-12 col-md-6 mt-1">
             <label for="">Group post</label>
             <input type="text" class="form-control" placeholder="" name="group__post">
           </div>
-          <div class="col-12 mt-3">
+          <div class="col-12 col-md-6 mt-1">
             <label for="">Block Type Display</label>
             <select class="form-control" id="select__display" name="blockDisplay__post">
               <option >Select option</option value="">
@@ -78,7 +78,7 @@
               <option value="middle">Middle</option>
             </select>
           </div>
-          <div class="form-group col-12 d-none mt-3" id="ctn__img__network">
+          <div class="form-group col-12 d-none mt-1" id="ctn__img__network">
             <label for="">Network user post image</label>
             <div class="input-group mb-3">
               <input type="file" onchange="encodeImageFileAsURL(this)" />
@@ -91,7 +91,10 @@
         
       </form>
       <div class="col-12 mt-3 text-right mb-5">
-        <a class="mb-5 btn btn-primary send__post " >Guardar</a>
+        <a class="mb-5 btn btn-primary send__post " >
+          <span class="spinner-border spinner-border-sm d-none" role="status" aria-hidden="true"></span>
+          Save post
+        </a>
       </div>
      </div>
    </div>

@@ -1,6 +1,5 @@
 const printPosts = () => {
     let postsCollection = {};
-    $("").empty();
     $.ajax({
         url: "https://blog-6g.firebaseio.com/team1.json",
         method: "GET",
@@ -199,4 +198,6 @@ const printPosts = () => {
         }
     })
 }
+
+// call function create post
 printPosts()

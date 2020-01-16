@@ -1,12 +1,72 @@
-.container__post{
+body {
+  background: #11998e;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #38ef7d, #11998e);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #38ef7d, #11998e); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+
+}
+
+.container__post {
   max-width: 600px;
   display: block;
   margin-left: auto;
   margin-right: auto;
 }
 
-.send__post{
-  color: #fff !important;
+.container__post form {
+  box-shadow: 0 2px 8px rgba(0, 0, 0, .33);
+}
+
+.container__post h1 {
+  font-size: 1.5em;
+}
+.container__post form label{
+  font-size: .75em;
+  color: #444444;
+  font-weight: 500;
+}
+.container__post input[type="text"],
+.container__post select,
+.container__post textarea {
+  border: 2px solid #ababab;
+  outline: none;
+}
+
+.container__post input[type="text"]:focus,
+.container__post select:focus,
+.container__post textarea:focus {
+  border: 2px solid #1abc9c;
+  outline: none;
+  box-shadow: none !important;
+}
+.container__post input[type="text"].is-invalid,
+.container__post select.is-invalid,
+.container__post textarea.is-invalid{
+  border: 2px solid #dc3545;
+}
+
+.send__post {
+  color: #1abc9c !important;
   text-decoration: none;
   text-transform: uppercase;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  display: inline-block;
+  box-sizing: content-box;
+  background-color: #fff;
+  color: #fff;
+  font-weight: 700;
+  font-size: 12px;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 15px 25px;
+  border-radius: 30px;
+  outline: 0 !important;
+  border: 0;
+  transition: all .2s ease-in-out;
+  cursor: pointer;
+}
+.send__post:hover{
+  box-shadow: 0 0 20px rgba(0,0,0,.4);
+  background-color: #fff;
 }
