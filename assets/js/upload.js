@@ -27,8 +27,20 @@ $(function () {
         console.log(response);
         //printUsers();
         $('.send__post .spinner-border').addClass('d-none')
+        $('.send__post .spinner-border').text('Post created')
+        clearForm()
+        setTimeout(function(){
+          $('.send__post .spinner-border').text('Save post')
+        }, 3000)
       }
     });
+  }
+  const clearForm = () =>{
+    $('input[type="text"]').val('')
+    $('input[type="hidden"]').val('')
+    $('input[type="file"]').val(null)
+    $('select').val('')
+    $('textarea').val('')
   }
 
   $('.send__post').click(function (e) {
