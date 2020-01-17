@@ -47,26 +47,32 @@ $(function () {
     let blockDisplay = $('select[name="blockDisplay__post"]').val();
     let imgDataNetwork = $('input[name="img__network"]').val();
 
-    if(title === ""){
+    if (title === "") {
       $('input[name="title__post"]').addClass('is-invalid')
+      $('.send__post .spinner-border').addClass('d-none')
       return;
-    }else if(minute){
+    } else if (minute === "") {
       $('input[name="minutes"]').addClass('is-invalid')
+      $('.send__post .spinner-border').addClass('d-none')
       return;
-    }else if(category){
+    } else if (category === "") {
       $('input[name="category__post"]').addClass('is-invalid')
+      $('.send__post .spinner-border').addClass('d-none')
       return;
-    }else if(author){
+    } else if (author === "") {
       $('input[name="author__post"]').addClass('is-invalid')
+      $('.send__post .spinner-border').addClass('d-none')
       return;
-    }else if(group){
+    } else if (group === "") {
       $('input[name="group__post"]').addClass('is-invalid')
+      $('.send__post .spinner-border').addClass('d-none')
       return;
-    }else if(group){
+    } else if (blockDisplay === "") {
       $('input[name="blockDisplay__post"]').addClass('is-invalid')
+      $('.send__post .spinner-border').addClass('d-none')
       return;
     }
-    
+
     var objectPost = {
       title,
       content,
@@ -81,13 +87,13 @@ $(function () {
       imgDataNetwork
     }
     uploadPost(objectPost)
-    
+
   })
 
-  $('#select__display').change(function(){
-    if($('#select__display').val() === "network"){
+  $('#select__display').change(function () {
+    if ($('#select__display').val() === "network") {
       $('#ctn__img__network').removeClass('d-none')
-    }else{
+    } else {
       $('#ctn__img__network').addClass('d-none')
     }
   })

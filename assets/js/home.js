@@ -10,6 +10,7 @@ const printPosts = () => {
             postsCollection = response;
             $.each(postsCollection, (i, value) => {
                 if (value.blockDisplay === "list") {
+                    console.log(value)
                     $(".ctn__suggested").find('.extremePostPreview').remove()
                     $(".ctn__suggested").prepend(`
                 <div class="item__preview d-flex justify-content-between">
@@ -19,7 +20,7 @@ const printPosts = () => {
                     <span class="description">${value.content}</span>
                     <div class="d-flex justify-content-between">
                         <div class=" mt-3 mr-2 ellipsis">
-                            <p class="ellipsis"><span class="autor"></span>${value.author}<span
+                            <p class="ellipsis"><span class="autor"></span>${value.author} in <span
                                 class="group">${value.group}
                                                         </span></p>
                             <p class="ellipsis">
@@ -98,9 +99,9 @@ const printPosts = () => {
                 if (value.blockDisplay === "middle") {
                     // clean preload image
                     $("#middle__post").find('.extremePostPreview').remove()
-                    maxMiddle ++;
+                    maxMiddle++;
                     console.log(i, value)
-                    if(maxMiddle <= 3){
+                    if (maxMiddle <= 3) {
                         $("#middle__post").prepend(`
                         <div class=" d-flex justify-content-between  flex-row-reverse flex-md-row item__preview small">
                             <div class="item__image d-flex img__post">
